@@ -1,0 +1,4 @@
+name: McOpenEco
+version: '${project.version}'
+main: lemmensthijmen.mcopeneco.McOpenEco
+api-version: 1.18
