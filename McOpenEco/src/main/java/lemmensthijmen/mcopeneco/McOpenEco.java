@@ -1,5 +1,7 @@
 package lemmensthijmen.mcopeneco;
 
+import lemmensthijmen.DataBase.Database;
+import lemmensthijmen.Events.CheckPlayerInDataBase;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class McOpenEco extends JavaPlugin {
@@ -9,6 +11,9 @@ public final class McOpenEco extends JavaPlugin {
     @Override
     public void onEnable() {
         McOpenEco.main = this;
+        Database.connectDataBase();
+
+        new CheckPlayerInDataBase(this);
     }
 
     @Override
